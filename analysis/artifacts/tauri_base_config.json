@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Loggy3",
+  "version": "0.10.5",
+  "identifier": "com.loggy3.recorder",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "create": false,
+        "title": "Loggy3",
+        "width": 860,
+        "height": 620,
+        "resizable": false,
+        "visible": true,
+        "acceptFirstMouse": true,
+        "skipTaskbar": false,
+        "titleBarStyle": "Visible",
+        "theme": "Light"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "resources": {
+      "../../target/release/loggy3-kernel": "loggy3-kernel",
+      "../../target/release/replay_mac": "replay_mac",
+      "../src/assets/icon.png": "icons/icon.png",
+      "../src/assets/menubar.png": "icons/menubar.png"
+    },
+    "createUpdaterArtifacts": true,
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "macOS": {
+      "signingIdentity": "ED8CD4E7F16183DA663A623CB6FA20ED0F815AA9",
+      "entitlements": "app.entitlements"
+    }
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEExRDg1NkQ1NjQ5ODU1OTIKUldTU1ZaaGsxVmJZb2Y4eng2d0xEUkd0dDh2R1lsdUZuTTRBa0NyMjQ0R2lTK0dvSHFCcUVCS24K",
+      "endpoints": [
+        "https://loggy3.com/macos/latest.json"
+      ]
+    }
+  }
+}

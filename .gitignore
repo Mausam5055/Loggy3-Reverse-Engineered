@@ -1,0 +1,9 @@
+# Third-party downloaded rule sets and repositories
+analysis/00_triage/capa-rules/
+analysis/00_triage/capa-repo/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
