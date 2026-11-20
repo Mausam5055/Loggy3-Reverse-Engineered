@@ -175,3 +175,4 @@ rule Suspicious_Loggy3_Bootstrap_Installer {
 
 ## ⚠️ Disclaimer
 This repository is published solely for cybersecurity research, threat intelligence, and digital forensics education.
+
